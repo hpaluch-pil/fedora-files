@@ -50,6 +50,7 @@ koji add-group-pkg ${DIST_BUILD} build \
 	tar				\
 	unzip				\
 	util-linux-ng			\
+	fedpkg-minimal			\
 	which
 
 # Add Group srpm-build
@@ -69,5 +70,8 @@ koji add-group-pkg ${DIST_BUILD} srpm-build \
 	rpmdevtools			\
 	shadow-utils			\
 	subversion			\
+	fedpkg-minimal			\
 	tar
+
+koji regen-repo ${DIST_BUILD}
 exit 0
